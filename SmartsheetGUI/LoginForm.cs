@@ -17,11 +17,9 @@ namespace SmartsheetGUI
         public static string Token;
         public LoginForm()
         {
-            //qtepuuhpc9mmdlzzen5r571e6v
-
             InitializeComponent();
             string accessKey = string.Empty;
-            FileStream fileStream = File.Open(".../.../AccessToken.txt", FileMode.OpenOrCreate);
+            FileStream fileStream = File.Open("../../AccessToken.txt", FileMode.OpenOrCreate);
 
             using (StreamReader reader = new StreamReader(fileStream))
             {
@@ -32,7 +30,7 @@ namespace SmartsheetGUI
                 }
                 else
                 {
-                    MessageBox.Show("No access key found.\nPlease paste your access key in the AccessKey file under bin/debug/Credentials/AccessKey.txt");
+                    MessageBox.Show("No access key found.");
                 }
                 
             }
@@ -41,7 +39,6 @@ namespace SmartsheetGUI
 
         private async void btnSubmitToken_Click(object sender, EventArgs e)
         {
-            //string token = txtAccessToken.Text;
             Token = txtAccessToken.Text;
             // Build the client
             SmartsheetClient client = null;
