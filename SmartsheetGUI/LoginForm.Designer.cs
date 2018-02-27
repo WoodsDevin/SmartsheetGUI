@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmitToken = new System.Windows.Forms.Button();
             this.txtAccessToken = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -67,11 +68,22 @@
             this.txtAccessToken.Size = new System.Drawing.Size(188, 20);
             this.txtAccessToken.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 26);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Please paste your access key in the AccessKey file \r\nunder bin/debug/Credentials/" +
+    "AccessKey.txt";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 148);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubmitToken);
             this.Controls.Add(this.txtAccessToken);
@@ -87,6 +99,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSubmitToken;
         private System.Windows.Forms.TextBox txtAccessToken;
+        private System.Windows.Forms.Label label2;
     }
 }
 
